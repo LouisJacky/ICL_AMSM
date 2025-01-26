@@ -54,7 +54,7 @@ model.load_state_dict(torch.load(checkpoint_path), strict=False)
 ```
 
 ## Datasets
-We use [OK-VQA](https://okvqa.allenai.org/download.html), [VizWiz](https://vizwiz.org/tasks-and-datasets/vqa/), [COCO2014](https://cocodataset.org/#download), [Tiny ImageNet](https://paperswithcode.com/dataset/tiny-imagenet) datasets. You need to download the files of these datasets yourself, including the Images and Annotations. 
+We use [OK-VQA](https://okvqa.allenai.org/download.html), [VizWiz](https://vizwiz.org/tasks-and-datasets/vqa/) for VQA, [COCO2014](https://cocodataset.org/#download) for captioin,and [Tiny ImageNet](https://paperswithcode.com/dataset/tiny-imagenet) for classification. You need to download the files of these datasets yourself, including the Images and Annotations. 
 
 
 ## Main Files
