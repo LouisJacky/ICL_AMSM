@@ -29,7 +29,7 @@ pip install -e .
 
 3. Download 'cococaption' folder from [this link](https://drive.google.com/drive/folders/1nya7F-055ExZcnwSUMuWB9gtMmQbAO2L?usp=drive_link) and put it under 'RL_base' folder.
 
-##VLM
+## VLM
 **OpenFlamingo** is a multimodal language model that can be used for a variety of tasks. It is trained on a large multimodal dataset (e.g. Multimodal C4) and can be used to generate text conditioned on interleaved images/text. You can read its [blog](https://laion.ai/blog/open-flamingo-v2/) and [code](https://github.com/mlfoundations/open_flamingo) for more information. 
 
 
