@@ -16,7 +16,7 @@ This project introduces an Adaptive Multi-modal Search Model (AMSM) for example 
 
 ### label_vqa.py
 
-Implements Token-level Confidence Scoring to evaluate example pair matching:
+Implements Token-level Confidence Scoring to evaluate example pair matching.
 
 <!--
 ```python
@@ -41,7 +41,7 @@ def get_word_confidence(ofv2_model, device, query_image, query_question, target_
     avg_confidence = sum(target_probs) / len(target_probs)
     return avg_confidence
 ```
- --> 
+--> 
 
 
 Required path configurations:
@@ -62,8 +62,9 @@ parser.add_argument('--features_file',
 
 ### train_vqa.py
 
-Trains the Adaptive Multi-modal Search Model:
+Trains the Adaptive Multi-modal Search Model.
 
+<!--
 ```python
 # Load image and text encoders
 clip_model, image_preprocess = clip.load(args.clip_type, device=device)
@@ -86,7 +87,7 @@ for epoch in range(start_epoch, args.epochs):
         outputs = policy_model(query_images, query_questions, example_images, example_questions)
         loss = custom_loss(outputs, labels, args.candidate_num)
 ```
-
+-->
 
 Required path configurations:
 ```python
@@ -106,6 +107,7 @@ Evaluation process in two stages:
 1. Example Retrieval: Uses trained policy model to select best examples for test samples
 2. VQA Scoring: Completes VQA task using selected examples and VLM model, then calculates performance
 
+<!--
 ```python
 def main():
     # Stage 1: Example Retrieval
@@ -116,7 +118,7 @@ def main():
     ofv2_model = create_model_and_transforms()
     score_main(args, ofv2_model, image_processor, tokenizer)
 ```
-
+-->
 
 Required path configurations:
 ```python
