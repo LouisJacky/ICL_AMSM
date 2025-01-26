@@ -45,6 +45,14 @@ model, image_processor, tokenizer = create_model_and_transforms(
     cross_attn_every_n_layers=4
 )
 
+# grab model checkpoint from huggingface hub
+from huggingface_hub import hf_hub_download
+import torch
+
+checkpoint_path = hf_hub_download("openflamingo/OpenFlamingo-9B-vitl-mpt7b", "checkpoint.pt")
+model.load_state_dict(torch.load(checkpoint_path), strict=False)
+```
+
 ## Main Files
 
 ### label_vqa.py
