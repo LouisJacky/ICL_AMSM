@@ -9,7 +9,7 @@ This project introduces an Adaptive Multi-modal Search Model (AMSM) for example 
 - End-to-end Training: Complete training and evaluation pipeline from example selection to downstream VQA tasks
 
 <br>
-    <img src="docs/_static/model.png" width="1000"/>
+    <img src="docs/_static/figure_model.pdf" width="800"/>
 <br>
 
 ## Main Files
