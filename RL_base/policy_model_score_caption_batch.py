@@ -18,24 +18,24 @@ from retrieval.process_label_caption_cider import extract_short_answer
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--lm_path', type=str,
-                        default="/data16tb/ljq/checkpoints/mpt-7b")
+                        default="/path/to/checkpoints/mpt-7b")
     parser.add_argument('--lm_tokenizer_path', type=str,
-                        default="/data16tb/ljq/checkpoints/mpt-7b")
+                        default="/path/to/checkpoints/mpt-7b")
     parser.add_argument('--checkpoint_path', type=str,
-                        default="/data16tb/ljq/checkpoints/ofv2/checkpoint.pt")
+                        default="/path/to/checkpoints/ofv2/checkpoint.pt")
     parser.add_argument('--gpu', type=str, default='2')
     # parser.add_argument('--input_file', type=str,
     #                     default='../log/ofv2_base/END_OUTPUT_linear/coco_caption/evaluation_results/best_examples_20250105_231937.json')
     parser.add_argument('--input_file', type=str,
-                        default='/data16tb/ljq/Code/ICL_diversity_ofv3/RL_base/coco_caption_test_train_matching_si_8promt.json')
+                        default='/path/to/AMSM/RL_base/coco_caption_test_train_matching_si_8promt.json')
     parser.add_argument('--output_file', type=str,
                         default='caption_generation_results.json')
     parser.add_argument('--train_image_dir', type=str,
-                        default='/data16tb/ljq/datasets/ok_vqa/train2014')
+                        default='/path/to/datasets/ok_vqa/train2014')
     parser.add_argument('--val_image_dir', type=str,
-                        default='/data16tb/ljq/datasets/ok_vqa/val2014')
+                        default='/path/to/datasets/ok_vqa/val2014')
     parser.add_argument('--annotations_path', type=str,
-                        default='/data16tb/ljq/datasets/coco_caption/annotations_captions_val2014.json')
+                        default='/path/to/datasets/coco_caption/annotations_captions_val2014.json')
     parser.add_argument('--shot_number', type=int, default=8)
 
     parser.add_argument('--batch_size',

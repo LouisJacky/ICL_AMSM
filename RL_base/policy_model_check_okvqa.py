@@ -116,9 +116,9 @@ def get_okvqa_dataloader(questions_file, annotations_file, image_dir, batch_size
 def parse_args():
     parser = argparse.ArgumentParser()
     # ofv2
-    parser.add_argument('--lm_path', type=str, default="/data16tb/ljq/checkpoints/mpt-7b")
-    parser.add_argument('--lm_tokenizer_path', type=str, default="/data16tb/ljq/checkpoints/mpt-7b")
-    parser.add_argument('--checkpoint_path', type=str, default="/data16tb/ljq/checkpoints/ofv2/checkpoint.pt")
+    parser.add_argument('--lm_path', type=str, default="/path/to/checkpoints/mpt-7b")
+    parser.add_argument('--lm_tokenizer_path', type=str, default="/path/to/checkpoints/mpt-7b")
+    parser.add_argument('--checkpoint_path', type=str, default="/path/to/checkpoints/ofv2/checkpoint.pt")
     parser.add_argument('--gpu', type=str, default='3')
 
     parser.add_argument('--seed', type=int, default=1, help='random seed')
@@ -135,83 +135,83 @@ def parse_args():
     #     "--train_image_dir",
     #     type=str,
     #     help="Path to the vizwiz annotations json file.",
-    #     default="/data16tb/ljq/datasets/VizWiz/train",
+    #     default="/path/to/datasets/VizWiz/train",
     # )
     # parser.add_argument(
     #     "--test_image_dir",
     #     type=str,
     #     help="Path to the vizwiz annotations json file.",
-    #     default="/data16tb/ljq/datasets/VizWiz/val",
+    #     default="/path/to/datasets/VizWiz/val",
     # )
     #
     # parser.add_argument(
     #     "--vizwiz_train_questions_json_path",
     #     type=str,
     #     help="Path to the vizwiz questions json file.",
-    #     default="/data16tb/ljq/Code/OFv2_ICL_VQA/open_flamingo/eval/data/vizwiz/clustered_train_questions_vqa_format.json",
-    #     # default="/data16tb/ljq/Code/OFv2_ICL_VQA/open_flamingo/eval/data/vizwiz/train_questions_vqa_format.json",
+    #     default="/path/to/Code/OFv2_ICL_VQA/open_flamingo/eval/data/vizwiz/clustered_train_questions_vqa_format.json",
+    #     # default="/path/to/Code/OFv2_ICL_VQA/open_flamingo/eval/data/vizwiz/train_questions_vqa_format.json",
     # )
     # parser.add_argument(
     #     "--vizwiz_train_annotations_json_path",
     #     type=str,
     #     help="Path to the vizwiz annotations json file.",
-    #     default="/data16tb/ljq/Code/OFv2_ICL_VQA/open_flamingo/eval/data/vizwiz/sampled/sampled_train_annotations_vqa_format.json",
-    #     # default="/data16tb/ljq/Code/OFv2_ICL_VQA/open_flamingo/eval/data/vizwiz/train_annotations_vqa_format.json",
+    #     default="/path/to/Code/OFv2_ICL_VQA/open_flamingo/eval/data/vizwiz/sampled/sampled_train_annotations_vqa_format.json",
+    #     # default="/path/to/Code/OFv2_ICL_VQA/open_flamingo/eval/data/vizwiz/train_annotations_vqa_format.json",
     # )
     # parser.add_argument(
     #     "--vizwiz_test_questions_json_path",
     #     type=str,
     #     help="Path to the vizwiz questions json file.",
-    #     default="/data16tb/ljq/Code/OFv2_ICL_VQA/open_flamingo/eval/data/vizwiz/clustered_val_questions_vqa_format.json",
+    #     default="/path/to/Code/OFv2_ICL_VQA/open_flamingo/eval/data/vizwiz/clustered_val_questions_vqa_format.json",
     # )
     # parser.add_argument(
     #     "--vizwiz_test_annotations_json_path",
     #     type=str,
     #     help="Path to the vizwiz annotations json file.",
-    #     default="/data16tb/ljq/Code/OFv2_ICL_VQA/open_flamingo/eval/data/vizwiz/sampled/sampled_val_annotations_vqa_format.json",
+    #     default="/path/to/Code/OFv2_ICL_VQA/open_flamingo/eval/data/vizwiz/sampled/sampled_val_annotations_vqa_format.json",
     # )
     ## okvqa Dataset
     parser.add_argument(
         "--train_image_dir",
         type=str,
         help="Path to the okvqa annotations json file.",
-        default="/data16tb/ljq/datasets/ok_vqa/train2014",
+        default="/path/to/datasets/ok_vqa/train2014",
     )
     parser.add_argument(
         "--test_image_dir",
         type=str,
         help="Path to the okvqa annotations json file.",
-        default="/data16tb/ljq/datasets/ok_vqa/val2014",
+        default="/path/to/datasets/ok_vqa/val2014",
     )
 
     parser.add_argument(
         "--okvqa_train_questions_json_path",
         type=str,
         help="Path to the okvqa questions json file.",
-        default="/data16tb/ljq/datasets/ok_vqa/OpenEnded_mscoco_train2014_questions.json",
+        default="/path/to/datasets/ok_vqa/OpenEnded_mscoco_train2014_questions.json",
     )
     parser.add_argument(
         "--okvqa_train_annotations_json_path",
         type=str,
         help="Path to the okvqa annotations json file.",
-        default="/data16tb/ljq/datasets/ok_vqa/mscoco_train2014_annotations.json",
+        default="/path/to/datasets/ok_vqa/mscoco_train2014_annotations.json",
     )
     parser.add_argument(
         "--okvqa_test_questions_json_path",
         type=str,
         help="Path to the okvqa questions json file.",
-        default="/data16tb/ljq/datasets/ok_vqa/OpenEnded_mscoco_val2014_questions.json",
+        default="/path/to/datasets/ok_vqa/OpenEnded_mscoco_val2014_questions.json",
     )
     parser.add_argument(
         "--okvqa_test_annotations_json_path",
         type=str,
         help="Path to the okvqa annotations json file.",
-        default="/data16tb/ljq/datasets/ok_vqa/mscoco_val2014_annotations.json",
+        default="/path/to/datasets/ok_vqa/mscoco_val2014_annotations.json",
     )
 
     parser.add_argument('--features_file', type=str,
                         help="Path to the okvqa features_file.",
-                        default="/data16tb/ljq/Code/OFv2_ICL_VQA/open_flamingo/eval/data/okvqa/texts_features",
+                        default="/path/to/Code/OFv2_ICL_VQA/open_flamingo/eval/data/okvqa/texts_features",
                         )
     # parser.add_argument('--k_samples',
     #                     type=int,

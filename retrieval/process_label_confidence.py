@@ -22,15 +22,15 @@ def print_stats():
     print(f"平均每个查询的示例数: {total_examples / query_count:.2f}")
 
 # 读取标签对文件
-with open(f'/data16tb/ljq/Code/ICL_diversity_ofv3/RL_base/vizwiz_label_confidence_{k}.json', 'r') as f:
+with open(f'/path/to/AMSM/RL_base/vizwiz_label_confidence_{k}.json', 'r') as f:
     pair_data = json.load(f)
 
 # 读取问题和答案文件
-with open('/data16tb/ljq/Code/OFv2_ICL_VQA/open_flamingo/eval/data/vizwiz/clustered_train_questions_vqa_format.json',
+with open('/path/to/Code/OFv2_ICL_VQA/open_flamingo/eval/data/vizwiz/clustered_train_questions_vqa_format.json',
           'r') as f:
     questions_data = json.load(f)
 with open(
-        '/data16tb/ljq/Code/OFv2_ICL_VQA/open_flamingo/eval/data/vizwiz/sampled/sampled_train_annotations_vqa_format.json',
+        '/path/to/Code/OFv2_ICL_VQA/open_flamingo/eval/data/vizwiz/sampled/sampled_train_annotations_vqa_format.json',
         'r') as f:
     answers_data = json.load(f)
 
@@ -108,7 +108,7 @@ random.shuffle(new_dataset)
 print_stats()
 
 # 保存处理后的数据集
-output_file = '/data16tb/ljq/Code/ICL_diversity_ofv3/data/vizwiz_labeled_confidence.json'
+output_file = '/path/to/AMSM/data/vizwiz_labeled_confidence.json'
 with open(output_file, 'w') as f:
     json.dump(new_dataset, f, indent=2)
 

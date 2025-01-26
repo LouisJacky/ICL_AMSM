@@ -33,7 +33,7 @@ class VQADataset(Dataset):
         #     retrieval_path = "retrieval_results/vizwiz_validation_SQQR.npy"
         #     self.retrieval_set = np.load(retrieval_path, allow_pickle=True).item()
         if self.dataset_name in {"vizwiz"} and self.is_train == False:
-            retrieval_path = "/data16tb/ljq/Code/ICL_diversity_ofv2/retrieval_results/vizwiz_validation_SQ.npy"
+            retrieval_path = "/path/to/Code/ICL_diversity_ofv2/retrieval_results/vizwiz_validation_SQ.npy"
             self.retrieval_set = np.load(retrieval_path, allow_pickle=True).item()
 
         # 添加 img_metadata 和 img_metadata_classwise

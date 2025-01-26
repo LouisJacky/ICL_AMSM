@@ -15,9 +15,9 @@ def parse_args():
     parser.add_argument('--eval_result_path', type=str,
                         default="eval_results/all_methods_evaluation_20250119_212140.json")
     parser.add_argument('--train_image_dir', type=str,
-                        default="/data16tb/ljq/datasets/ok_vqa/train2014")
+                        default="/path/to/datasets/ok_vqa/train2014")
     parser.add_argument('--val_image_dir', type=str,
-                        default="/data16tb/ljq/datasets/ok_vqa/val2014")
+                        default="/path/to/datasets/ok_vqa/val2014")
     parser.add_argument('--output_dir', type=str, default="analysis_visualization")
 
     parser.add_argument('--max_cases', type=int, default=5)

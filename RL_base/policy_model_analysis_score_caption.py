@@ -18,18 +18,18 @@ def parse_args():
     parser = argparse.ArgumentParser()
     # OFv2模型参数
     parser.add_argument('--lm_path', type=str,
-                        default="/data16tb/ljq/checkpoints/mpt-7b")
+                        default="/path/to/checkpoints/mpt-7b")
     parser.add_argument('--lm_tokenizer_path', type=str,
-                        default="/data16tb/ljq/checkpoints/mpt-7b")
+                        default="/path/to/checkpoints/mpt-7b")
     parser.add_argument('--checkpoint_path', type=str,
-                        default="/data16tb/ljq/checkpoints/ofv2/checkpoint.pt")
+                        default="/path/to/checkpoints/ofv2/checkpoint.pt")
     parser.add_argument('--gpu', type=str, default='4')
 
     # 数据路径
     parser.add_argument('--val_image_dir', type=str,
-                        default='/data16tb/ljq/datasets/ok_vqa/val2014')
+                        default='/path/to/datasets/ok_vqa/val2014')
     parser.add_argument('--train_image_dir', type=str,
-                        default='/data16tb/ljq/datasets/ok_vqa/train2014')
+                        default='/path/to/datasets/ok_vqa/train2014')
 
     # 分析结果路径
     parser.add_argument('--analysis_dir', type=str, default="caption_analysis_results")

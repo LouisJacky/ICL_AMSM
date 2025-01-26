@@ -80,11 +80,11 @@ def parse_args():
     parser = argparse.ArgumentParser()
     # ofv2相关参数
     parser.add_argument('--lm_path', type=str,
-                        default="/data16tb/ljq/checkpoints/mpt-7b")
+                        default="/path/to/checkpoints/mpt-7b")
     parser.add_argument('--lm_tokenizer_path', type=str,
-                        default="/data16tb/ljq/checkpoints/mpt-7b")
+                        default="/path/to/checkpoints/mpt-7b")
     parser.add_argument('--checkpoint_path', type=str,
-                        default="/data16tb/ljq/checkpoints/ofv2/checkpoint.pt")
+                        default="/path/to/checkpoints/ofv2/checkpoint.pt")
     parser.add_argument('--gpu', type=str, default='0')
 
     # 基础参数
@@ -99,19 +99,19 @@ def parse_args():
 
     # 数据集路径
     parser.add_argument('--train_image_dir', type=str,
-                        default='/data16tb/ljq/datasets/ok_vqa/train2014')
+                        default='/path/to/datasets/ok_vqa/train2014')
     parser.add_argument('--val_image_dir', type=str,
-                        default='/data16tb/ljq/datasets/ok_vqa/val2014')
+                        default='/path/to/datasets/ok_vqa/val2014')
     # parser.add_argument('--annotations_path', type=str,
-    #                     default='/data16tb/ljq/datasets/coco_caption/annotations_captions_val2014.json')
+    #                     default='/path/to/datasets/coco_caption/annotations_captions_val2014.json')
     parser.add_argument('--val_json_file', type=str,
-                        default='/data16tb/ljq/datasets/coco_caption/captions_val2014.json')
+                        default='/path/to/datasets/coco_caption/captions_val2014.json')
     parser.add_argument('--train_json_file', type=str,
-                        default='/data16tb/ljq/datasets/coco_caption/captions_train2014.json')
+                        default='/path/to/datasets/coco_caption/captions_train2014.json')
 
     # 特征文件路径
     parser.add_argument('--features_file', type=str,
-                        default='/data16tb/ljq/Code/OFv2_ICL_VQA/open_flamingo/eval/data/coco_caption/features')
+                        default='/path/to/Code/OFv2_ICL_VQA/open_flamingo/eval/data/coco_caption/features')
 
     # 输出路径
     parser.add_argument('--output_root', type=str,

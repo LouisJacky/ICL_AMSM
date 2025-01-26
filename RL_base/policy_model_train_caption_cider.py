@@ -155,7 +155,7 @@ def parse_args():
     parser.add_argument('--resume', type=bool, default=False,
                         help='Breakpoint recovery training')
     parser.add_argument('--resume_checkpoint', type=str,
-                        default="/data16tb/ljq/Code/ICL_diversity_ofv3/log/ofv2_base/END_OUTPUT_linear/vizwiz/policy_model_epoch_2.pth",
+                        default="/path/to/AMSM/log/ofv2_base/END_OUTPUT_linear/vizwiz/policy_model_epoch_2.pth",
                         help='Learned model checkpoint path')
 
     parser.add_argument('--backbone', default="clip", type=str, help='backbone of retrival feature VIT、clip')
@@ -175,13 +175,13 @@ def parse_args():
         "--json_file",
         type=str,
         help="Path to the vizwiz questions json file.",
-        default="/data16tb/ljq/Code/ICL_diversity_ofv3/data/coco_caption_labeled_cider.json",
+        default="/path/to/AMSM/data/coco_caption_labeled_cider.json",
     )
     parser.add_argument(
         "--image_dir",
         type=str,
         help="Path to the COCO train2014 images directory",
-        default="/data16tb/ljq/datasets/ok_vqa/train2014",
+        default="/path/to/datasets/ok_vqa/train2014",
     )
 
     args = parser.parse_args()

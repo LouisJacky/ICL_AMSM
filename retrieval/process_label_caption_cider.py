@@ -32,10 +32,10 @@ def parse_args():
                         default='../log/ofv2_base/END_OUTPUT_linear/coco_caption/generation_results_temp_5000.json',
                         help='生成结果文件路径')
     parser.add_argument('--annotations_path',
-                        default='/data16tb/ljq/datasets/coco_caption/annotations_captions_train2014.json',
+                        default='/path/to/datasets/coco_caption/annotations_captions_train2014.json',
                         help='COCO标注文件路径')
     parser.add_argument('--output_file',
-                        default='/data16tb/ljq/Code/ICL_diversity_ofv3/data/coco_caption_labeled_cider.json',
+                        default='/path/to/AMSM/data/coco_caption_labeled_cider.json',
                         help='输出文件路径')
     return parser.parse_args()
 

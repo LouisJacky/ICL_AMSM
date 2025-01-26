@@ -28,18 +28,18 @@ def parse_args():
     parser = argparse.ArgumentParser(description='COCO Caption Generation and Evaluation')
 
     # 路径相关参数
-    parser.add_argument('--lm_path', default='/data16tb/ljq/checkpoints/mpt-7b',
+    parser.add_argument('--lm_path', default='/path/to/checkpoints/mpt-7b',
                         help='语言模型路径')
-    parser.add_argument('--lm_tokenizer_path', default='/data16tb/ljq/checkpoints/mpt-7b',
+    parser.add_argument('--lm_tokenizer_path', default='/path/to/checkpoints/mpt-7b',
                         help='分词器路径')
-    parser.add_argument('--checkpoint_path', default='/data16tb/ljq/checkpoints/ofv2/checkpoint.pt',
+    parser.add_argument('--checkpoint_path', default='/path/to/checkpoints/ofv2/checkpoint.pt',
                         help='检查点路径')
-    parser.add_argument('--json_path', default='/data16tb/ljq/datasets/coco_caption/captions_train2014.json',
+    parser.add_argument('--json_path', default='/path/to/datasets/coco_caption/captions_train2014.json',
                         help='COCO标注JSON文件路径')
     parser.add_argument('--annotations_path',
-                        default='/data16tb/ljq/datasets/coco_caption/annotations_captions_train2014.json',
+                        default='/path/to/datasets/coco_caption/annotations_captions_train2014.json',
                         help='COCO评估标注文件路径')
-    parser.add_argument('--image_dir', default='/data16tb/ljq/datasets/ok_vqa',
+    parser.add_argument('--image_dir', default='/path/to/datasets/ok_vqa',
                         help='图像根目录')
     parser.add_argument('--load_similarity', type=bool,
                         default=True,
@@ -65,7 +65,7 @@ def parse_args():
                         help='Number of top similar samples to select')
     # 添加选定样本文件路径参数
     parser.add_argument('--selected_samples', type=str,
-                        default='/data16tb/ljq/Code/ICL_diversity_ofv3/retrieval/selected_coco_samples.json',
+                        default='/path/to/AMSM/retrieval/selected_coco_samples.json',
                         help='选定样本的JSON文件路径')
     parser.add_argument('--num_samples', type=int, default=10000,
                         help='要处理的样本数量,在selected_samples!=None时无效')

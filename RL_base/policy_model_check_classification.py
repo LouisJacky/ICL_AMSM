@@ -74,7 +74,7 @@ def custom_collate(batch):
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--root_dir', type=str, default='/data16tb/ljq/datasets/tiny-imagenet-200')
+    parser.add_argument('--root_dir', type=str, default='/path/to/datasets/tiny-imagenet-200')
     parser.add_argument('--gpu', type=str, default='0')
     parser.add_argument('--batch_size', type=int, default=32)
     parser.add_argument('--num_workers', type=int, default=4)

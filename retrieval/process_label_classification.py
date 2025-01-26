@@ -36,7 +36,7 @@ def get_image_name(idx, dataset):
 
 def main():
     # 配置参数
-    dataset_root = '/data16tb/ljq/datasets/tiny-imagenet-200'
+    dataset_root = '/path/to/datasets/tiny-imagenet-200'
     input_file = '../log/ofv2_base/END_OUTPUT_linear/tiny_imagenet/tiny_imagenet_label_confidence_4800_32.json'
     output_file = '../data/tiny_imagenet_labeled_confidence.json'
 

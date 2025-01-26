@@ -120,14 +120,14 @@ def parse_args():
 
     # 数据集相关
     parser.add_argument('--json_file', type=str, default='../data/tiny_imagenet_labeled_confidence.json')
-    parser.add_argument('--image_dir', type=str, default='/data16tb/ljq/datasets/tiny-imagenet-200')
+    parser.add_argument('--image_dir', type=str, default='/path/to/datasets/tiny-imagenet-200')
     parser.add_argument('--BENCHMARK', default='tiny_imagenet', type=str)
 
     # 训练相关
     parser.add_argument('--resume', type=bool, default=False,
                         help='Breakpoint recovery training')
     parser.add_argument('--resume_checkpoint', type=str,
-                        default="/data16tb/ljq/Code/ICL_diversity_ofv3/log/ofv2_base/END_OUTPUT_linear/tiny_imagenet/policy_model_epoch_1.pth",
+                        default="/path/to/AMSM/log/ofv2_base/END_OUTPUT_linear/tiny_imagenet/policy_model_epoch_1.pth",
                         help='Learned model checkpoint path')
     parser.add_argument('--lr', type=float, default=0.0001)
     parser.add_argument('--epochs', type=int, default=2)

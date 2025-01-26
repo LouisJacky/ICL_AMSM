@@ -26,23 +26,23 @@ def parse_args():
     parser.add_argument('--shot_number', type=int, default=8)
 
     # 数据路径
-    parser.add_argument('--train_image_dir', type=str, default="/data16tb/ljq/datasets/ok_vqa/train2014")
-    parser.add_argument('--test_image_dir', type=str, default="/data16tb/ljq/datasets/ok_vqa/val2014")
+    parser.add_argument('--train_image_dir', type=str, default="/path/to/datasets/ok_vqa/train2014")
+    parser.add_argument('--test_image_dir', type=str, default="/path/to/datasets/ok_vqa/val2014")
     parser.add_argument('--okvqa_train_questions_json_path', type=str,
-                        default="/data16tb/ljq/datasets/ok_vqa/OpenEnded_mscoco_train2014_questions.json")
+                        default="/path/to/datasets/ok_vqa/OpenEnded_mscoco_train2014_questions.json")
     parser.add_argument('--okvqa_train_annotations_json_path', type=str,
-                        default="/data16tb/ljq/datasets/ok_vqa/mscoco_train2014_annotations.json")
+                        default="/path/to/datasets/ok_vqa/mscoco_train2014_annotations.json")
     parser.add_argument('--okvqa_test_questions_json_path', type=str,
-                        default="/data16tb/ljq/datasets/ok_vqa/OpenEnded_mscoco_val2014_questions.json")
+                        default="/path/to/datasets/ok_vqa/OpenEnded_mscoco_val2014_questions.json")
     parser.add_argument('--okvqa_test_annotations_json_path', type=str,
-                        default="/data16tb/ljq/datasets/ok_vqa/mscoco_val2014_annotations.json")
+                        default="/path/to/datasets/ok_vqa/mscoco_val2014_annotations.json")
 
     # 模型相关
     parser.add_argument('--policy_feature_dim', type=int, default=512)
     parser.add_argument('--policy_model_checkpoint', type=str,
-                        default="/data16tb/ljq/Code/ICL_diversity_ofv3/log/ofv2_base/END_OUTPUT_linear/okvqa/policy_model_both_RN50x16_epoch_2.pth")
+                        default="/path/to/AMSM/log/ofv2_base/END_OUTPUT_linear/okvqa/policy_model_both_RN50x16_epoch_2.pth")
     parser.add_argument('--features_file', type=str,
-                        default="/data16tb/ljq/Code/OFv2_ICL_VQA/open_flamingo/eval/data/okvqa/texts_features")
+                        default="/path/to/Code/OFv2_ICL_VQA/open_flamingo/eval/data/okvqa/texts_features")
     parser.add_argument('--clip_type', type=str, default='ViT-B/16',
                         choices=['ViT-B/32', 'ViT-B/16', 'ViT-L/14', 'ViT-L/14@336px',
                                  'RN50', 'RN101', 'RN50x4', 'RN50x16', 'RN50x64'],

@@ -29,13 +29,13 @@ def parse_args():
 
     # 数据集相关参数
     parser.add_argument('--val_json_file', type=str,
-                        default='/data16tb/ljq/datasets/coco_caption/captions_val2014.json')
+                        default='/path/to/datasets/coco_caption/captions_val2014.json')
     parser.add_argument('--train_json_file', type=str,
-                        default='/data16tb/ljq/datasets/coco_caption/captions_train2014.json')
+                        default='/path/to/datasets/coco_caption/captions_train2014.json')
     parser.add_argument('--val_image_dir', type=str,
-                        default='/data16tb/ljq/datasets/ok_vqa')
+                        default='/path/to/datasets/ok_vqa')
     parser.add_argument('--train_image_dir', type=str,
-                        default='/data16tb/ljq/datasets/ok_vqa')
+                        default='/path/to/datasets/ok_vqa')
 
     # 其他参数
     parser.add_argument('--batch_size', type=int, default=8)

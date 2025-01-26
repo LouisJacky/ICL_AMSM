@@ -20,14 +20,14 @@ def print_stats():
 
 k = 32
 # 读取标签对文件
-with open(f'/data16tb/ljq/Code/ICL_diversity_ofv3/RL_base/okvqa_label_confidence_{k}.json', 'r') as f:
+with open(f'/path/to/AMSM/RL_base/okvqa_label_confidence_{k}.json', 'r') as f:
     pair_data = json.load(f)
-# with open(f'/data16tb/ljq/Code/ICL_diversity_ofv3/RL_base/okvqa_label_similarity_temp.json', 'r') as f:
+# with open(f'/path/to/AMSM/RL_base/okvqa_label_similarity_temp.json', 'r') as f:
 #     pair_data = json.load(f)
 # 读取问题和答案文件
-with open('/data16tb/ljq/datasets/ok_vqa/OpenEnded_mscoco_train2014_questions.json', 'r') as f:
+with open('/path/to/datasets/ok_vqa/OpenEnded_mscoco_train2014_questions.json', 'r') as f:
     questions_data = json.load(f)['questions']
-with open('/data16tb/ljq/datasets/ok_vqa/mscoco_train2014_annotations.json', 'r') as f:
+with open('/path/to/datasets/ok_vqa/mscoco_train2014_annotations.json', 'r') as f:
     answers_data = json.load(f)['annotations']
 
 # 创建question_id到image_id的映射
@@ -111,7 +111,7 @@ random.shuffle(new_dataset)
 print_stats()
 
 # 保存处理后的数据集
-output_file = '/data16tb/ljq/Code/ICL_diversity_ofv3/data/okvqa_labeled_confidence.json'
+output_file = '/path/to/AMSM/data/okvqa_labeled_confidence.json'
 with open(output_file, 'w') as f:
     json.dump(new_dataset, f, indent=2)
 

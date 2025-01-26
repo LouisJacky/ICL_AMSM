@@ -22,6 +22,6 @@ def compare_pth_files(file1_path, file2_path):
 
 # 使用示例
 file1_path = "../log/ofv2_base/END_OUTPUT_linear/vizwiz/vizwiz_projector_0.pt"
-file2_path = "/data16tb/ljq/checkpoints/ofv2/checkpoint.pt"
+file2_path = "/path/to/checkpoints/ofv2/checkpoint.pt"
 
 are_identical = compare_pth_files(file1_path, file2_path)

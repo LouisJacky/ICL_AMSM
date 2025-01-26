@@ -85,7 +85,7 @@ def parse_args():
 
     # 数据集相关参数
     parser.add_argument('--root_dir', type=str,
-                        default='/data16tb/ljq/datasets/tiny-imagenet-200')
+                        default='/path/to/datasets/tiny-imagenet-200')
 
     # 其他参数
     parser.add_argument('--batch_size', type=int, default=1)

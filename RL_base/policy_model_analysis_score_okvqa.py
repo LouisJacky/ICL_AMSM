@@ -20,27 +20,27 @@ import re
 def parse_args():
     parser = argparse.ArgumentParser()
     # OFv2模型参数
-    parser.add_argument('--lm_path', type=str, default="/data16tb/ljq/checkpoints/mpt-7b")
-    parser.add_argument('--lm_tokenizer_path', type=str, default="/data16tb/ljq/checkpoints/mpt-7b")
-    parser.add_argument('--checkpoint_path', type=str, default="/data16tb/ljq/checkpoints/ofv2/checkpoint.pt")
+    parser.add_argument('--lm_path', type=str, default="/path/to/checkpoints/mpt-7b")
+    parser.add_argument('--lm_tokenizer_path', type=str, default="/path/to/checkpoints/mpt-7b")
+    parser.add_argument('--checkpoint_path', type=str, default="/path/to/checkpoints/ofv2/checkpoint.pt")
     parser.add_argument('--gpu', type=str, default='2')
     parser.add_argument('--shot_number', type=int, default=4)
 
     # 数据路径
-    parser.add_argument('--val_image_dir', type=str, default="/data16tb/ljq/datasets/ok_vqa/val2014")
-    parser.add_argument('--train_image_dir', type=str, default="/data16tb/ljq/datasets/ok_vqa/train2014")
+    parser.add_argument('--val_image_dir', type=str, default="/path/to/datasets/ok_vqa/val2014")
+    parser.add_argument('--train_image_dir', type=str, default="/path/to/datasets/ok_vqa/train2014")
     parser.add_argument('--question_json_path', type=str,
-                        default="/data16tb/ljq/datasets/ok_vqa/OpenEnded_mscoco_val2014_questions.json")
+                        default="/path/to/datasets/ok_vqa/OpenEnded_mscoco_val2014_questions.json")
     parser.add_argument('--annotation_json_path', type=str,
-                        default="/data16tb/ljq/datasets/ok_vqa/mscoco_val2014_annotations.json")
+                        default="/path/to/datasets/ok_vqa/mscoco_val2014_annotations.json")
 
     # 分析结果路径
     parser.add_argument('--analysis_dir', type=str, default="analysis_results")
 
     parser.add_argument('--okvqa_train_questions_json_path', type=str,
-                        default="/data16tb/ljq/datasets/ok_vqa/OpenEnded_mscoco_train2014_questions.json")
+                        default="/path/to/datasets/ok_vqa/OpenEnded_mscoco_train2014_questions.json")
     parser.add_argument('--okvqa_train_annotations_json_path', type=str,
-                        default="/data16tb/ljq/datasets/ok_vqa/mscoco_train2014_annotations.json")
+                        default="/path/to/datasets/ok_vqa/mscoco_train2014_annotations.json")
     parser.add_argument('--output_dir', type=str,
                         default="eval_results")
     args = parser.parse_args()

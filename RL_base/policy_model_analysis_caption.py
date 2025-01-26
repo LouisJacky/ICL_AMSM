@@ -29,13 +29,13 @@ def parse_args():
 
     # 数据路径
     parser.add_argument('--train_image_dir', type=str,
-                        default='/data16tb/ljq/datasets/ok_vqa/train2014')
+                        default='/path/to/datasets/ok_vqa/train2014')
     parser.add_argument('--val_image_dir', type=str,
-                        default='/data16tb/ljq/datasets/ok_vqa/val2014')
+                        default='/path/to/datasets/ok_vqa/val2014')
     parser.add_argument('--train_json_file', type=str,
-                        default='/data16tb/ljq/datasets/coco_caption/captions_train2014.json')
+                        default='/path/to/datasets/coco_caption/captions_train2014.json')
     parser.add_argument('--val_json_file', type=str,
-                        default='/data16tb/ljq/datasets/coco_caption/captions_val2014.json')
+                        default='/path/to/datasets/coco_caption/captions_val2014.json')
 
     # 模型相关
     parser.add_argument('--policy_feature_dim', type=int, default=512)

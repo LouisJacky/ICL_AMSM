@@ -31,7 +31,7 @@ def calculate_accuracy(data):
 
 # 读取JSON文件
 try:
-    with open('/data16tb/ljq/Code/ICL_diversity_ofv2/RL_base/vizwiz_results_1percent_no_promt.json', 'r') as file:
+    with open('/path/to/Code/ICL_diversity_ofv2/RL_base/vizwiz_results_1percent_no_promt.json', 'r') as file:
         data = json.load(file)
 except json.JSONDecodeError:
     logging.error("JSON文件格式错误")

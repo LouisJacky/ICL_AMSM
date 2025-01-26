@@ -27,13 +27,13 @@ logging.basicConfig(level=logging.INFO)
 def parse_args():
     parser = argparse.ArgumentParser()
     # OpenFlamingo模型参数
-    parser.add_argument('--lm_path', type=str, default="/data16tb/ljq/checkpoints/mpt-7b")
-    parser.add_argument('--lm_tokenizer_path', type=str, default="/data16tb/ljq/checkpoints/mpt-7b")
-    parser.add_argument('--checkpoint_path', type=str, default="/data16tb/ljq/checkpoints/ofv2/checkpoint.pt")
+    parser.add_argument('--lm_path', type=str, default="/path/to/checkpoints/mpt-7b")
+    parser.add_argument('--lm_tokenizer_path', type=str, default="/path/to/checkpoints/mpt-7b")
+    parser.add_argument('--checkpoint_path', type=str, default="/path/to/checkpoints/ofv2/checkpoint.pt")
     parser.add_argument('--gpu', type=str, default='3')
 
     # 数据集参数
-    parser.add_argument('--root_dir', type=str, default='/data16tb/ljq/datasets/tiny-imagenet-200')
+    parser.add_argument('--root_dir', type=str, default='/path/to/datasets/tiny-imagenet-200')
     parser.add_argument('--features_file', type=str, default='tiny_imagenet_features.h5')
     parser.add_argument('--k_samples', type=int, default=32)
     parser.add_argument('--batch_size', type=int, default=32)
@@ -42,7 +42,7 @@ def parse_args():
     parser.add_argument('--output_root', type=str, default='../log/ofv2_base/END_OUTPUT_linear')
     parser.add_argument('--BENCHMARK', default='tiny_imagenet', type=str,
                         help='dataset type:"coco_caption vizwiz, okvqa, tiny_imagenet')
-    parser.add_argument('--selected_samples', type=str, default='/data16tb/ljq/Code/AIApplyTech/selected_samples.json')
+    parser.add_argument('--selected_samples', type=str, default='/path/to/Code/AIApplyTech/selected_samples.json')
 
     parser.add_argument('--load_similarity', type=bool,
                         default=True,

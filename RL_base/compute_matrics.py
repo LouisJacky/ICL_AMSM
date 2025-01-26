@@ -66,9 +66,9 @@ def compute_metrics(gts, res):
 
 def main():
     # 加载结果文件
-    # results_file = "/data16tb/ljq/Code/ICL_diversity_ofv3/log/ofv2_base/END_OUTPUT_linear/coco_caption/evaluation_results/final_results.json"  # 替换为你的结果文件路径
-    # results_file = "/data16tb/ljq/Code/ICL_diversity_ofv3/log/ofv2_base/END_OUTPUT_linear/coco_caption/evaluation_results/temp_results_22286.json"  # 替换为你的结果文件路径
-    results_file = "/data16tb/ljq/Code/ICL_diversity_ofv3/RL_base/caption_evaluation_results/multimodal_caption_eval_20250125_100243.json"  # 替换为你的结果文件路径
+    # results_file = "/path/to/AMSM/log/ofv2_base/END_OUTPUT_linear/coco_caption/evaluation_results/final_results.json"  # 替换为你的结果文件路径
+    # results_file = "/path/to/AMSM/log/ofv2_base/END_OUTPUT_linear/coco_caption/evaluation_results/temp_results_22286.json"  # 替换为你的结果文件路径
+    results_file = "/path/to/AMSM/RL_base/caption_evaluation_results/multimodal_caption_eval_20250125_100243.json"  # 替换为你的结果文件路径
 
     results = load_results(results_file)
 
@@ -89,8 +89,8 @@ def main():
     print(f"CIDEr: {metrics['CIDEr']:.4f}")
 
     # 保存评估结果
-    # output_file = "/data16tb/ljq/Code/ICL_diversity_ofv3/log/ofv2_base/END_OUTPUT_linear/coco_caption/evaluation_results/final_results_score.json"
-    output_file = "/data16tb/ljq/Code/ICL_diversity_ofv3/log/ofv2_base/END_OUTPUT_linear/coco_caption/evaluation_results/caption_generation_results_contrast_score.json"
+    # output_file = "/path/to/AMSM/log/ofv2_base/END_OUTPUT_linear/coco_caption/evaluation_results/final_results_score.json"
+    output_file = "/path/to/AMSM/log/ofv2_base/END_OUTPUT_linear/coco_caption/evaluation_results/caption_generation_results_contrast_score.json"
     with open(output_file, 'w') as f:
         json.dump(metrics, f, indent=2)
     print(f"\n评估结果已保存至: {output_file}")

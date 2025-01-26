@@ -15,20 +15,20 @@ from retrieval.process_label_caption_cider import extract_short_answer
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--lm_path', type=str,
-                        default="/data16tb/ljq/checkpoints/mpt-7b")
+                        default="/path/to/checkpoints/mpt-7b")
     parser.add_argument('--lm_tokenizer_path', type=str,
-                        default="/data16tb/ljq/checkpoints/mpt-7b")
+                        default="/path/to/checkpoints/mpt-7b")
     parser.add_argument('--checkpoint_path', type=str,
-                        default="/data16tb/ljq/checkpoints/ofv2/checkpoint.pt")
+                        default="/path/to/checkpoints/ofv2/checkpoint.pt")
     parser.add_argument('--gpu', type=str, default='3')
     parser.add_argument('--input_file', type=str,
                         default='../log/ofv2_base/END_OUTPUT_linear/tiny_imagenet/tiny_imagenet_classification_matches_random.json')
     # parser.add_argument('--input_file', type=str,
-    #                     default='/data16tb/ljq/Code/ICL_diversity_ofv3/log/ofv2_base/END_OUTPUT_linear/tiny_imagenet/tiny_imagenet_classification_matches_si.json')
+    #                     default='/path/to/AMSM/log/ofv2_base/END_OUTPUT_linear/tiny_imagenet/tiny_imagenet_classification_matches_si.json')
     parser.add_argument('--output_file', type=str,
                         default='classification_results.json')
     parser.add_argument('--root_dir', type=str,
-                        default='/data16tb/ljq/datasets/tiny-imagenet-200')
+                        default='/path/to/datasets/tiny-imagenet-200')
     parser.add_argument('--shot_number', type=int, default=4)
     return parser.parse_args()
 
