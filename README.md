@@ -12,6 +12,9 @@ This project introduces an Adaptive Multi-modal Search Model (AMSM) for example 
     <img src="docs/_static/figure_model.png" width="800"/>
 <br>
 
+## Environment Setting
+1.Please download 'cococaption' folder from [this link](https://drive.google.com/drive/folders/1nya7F-055ExZcnwSUMuWB9gtMmQbAO2L?usp=drive_link) and put it under 'RL_base' folder.
+
 ## Main Files
 
 ### label_vqa.py
