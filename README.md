@@ -29,6 +29,22 @@ pip install -e .
 
 3. Download 'cococaption' folder from [this link](https://drive.google.com/drive/folders/1nya7F-055ExZcnwSUMuWB9gtMmQbAO2L?usp=drive_link) and put it under 'RL_base' folder.
 
+##VLM
+**OpenFlamingo** is a multimodal language model that can be used for a variety of tasks. It is trained on a large multimodal dataset (e.g. Multimodal C4) and can be used to generate text conditioned on interleaved images/text. You can read its [blog](https://laion.ai/blog/open-flamingo-v2/) and [code](https://github.com/mlfoundations/open_flamingo) for more information. 
+
+
+OpenFlamingo combines a pretrained vision encoder and a language model using cross attention layers. In our experiment, we use [OpenFlamingo-9B]() for experiments. which uses pretrained vision encoders from the [OpenCLIP](https://github.com/mlfoundations/open_clip) package, [ViT-L-14](https://huggingface.co/openai/clip-vit-large-patch14), and uses the [MPT-7B](https://huggingface.co/mosaicml/mpt-7b) as the pretrained language models. Initialize the model as above and use the following code.
+``` python
+from open_flamingo import create_model_and_transforms
+
+model, image_processor, tokenizer = create_model_and_transforms(
+    clip_vision_encoder_path="ViT-L-14",
+    clip_vision_encoder_pretrained="openai",
+    lang_encoder_path="anas-awadalla/mpt-7b",
+    tokenizer_path="anas-awadalla/mpt-7b",
+    cross_attn_every_n_layers=4
+)
+
 ## Main Files
 
 ### label_vqa.py
