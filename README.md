@@ -8,6 +8,10 @@ This project introduces an Adaptive Multi-modal Search Model (AMSM) for example 
 - Adaptive Multi-modal Search: Example selection strategy combining visual and textual features
 - End-to-end Training: Complete training and evaluation pipeline from example selection to downstream VQA tasks
 
+<br>
+    <img src="docs/_static/model.png" width="1000"/>
+<br>
+
 ## Main Files
 
 ### label_vqa.py
@@ -142,15 +146,4 @@ python eval_vqa.py --policy_model_checkpoint /path/to/model.pth
 ```
 
 
-## Citation
 
-If you use this code in your research, please cite our paper:
-
-```
-@article{suo2024adaptive,
-  title={Adaptive Multi-modal Search Model for Visual Question Answering},
-  author={Suo, Author and Other, Authors},
-  journal={arXiv preprint},
-  year={2024}
-}
-```
