@@ -13,7 +13,21 @@ This project introduces an Adaptive Multi-modal Search Model (AMSM) for example 
 <br>
 
 ## Environment Setting
-1.Please download 'cococaption' folder from [this link](https://drive.google.com/drive/folders/1nya7F-055ExZcnwSUMuWB9gtMmQbAO2L?usp=drive_link) and put it under 'RL_base' folder.
+1. Create conda environment
+
+```bash
+conda create -n AMSM python=3.8
+conda activate AMSM
+```
+
+2. Build from source
+```bash
+git clone https://github.com/LouisJacky/ICL_AMSM
+cd ICL_AMSM
+pip install -e .
+```
+
+3. Download 'cococaption' folder from [this link](https://drive.google.com/drive/folders/1nya7F-055ExZcnwSUMuWB9gtMmQbAO2L?usp=drive_link) and put it under 'RL_base' folder.
 
 ## Main Files
 
