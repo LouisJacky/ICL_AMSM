@@ -144,6 +144,6 @@ python train_vqa.py --json_file /path/to/labeled_data.json --image_dir /path/to/
 ```bash
 python eval_vqa.py --policy_model_checkpoint /path/to/model.pth
 ```
-
+4. For Caption and Classification tasks, similar label-train-eval files can be found in the RL_base folder.
 
 
