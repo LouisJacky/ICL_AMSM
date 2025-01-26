@@ -18,6 +18,7 @@ This project introduces an Adaptive Multi-modal Search Model (AMSM) for example 
 
 Implements Token-level Confidence Scoring to evaluate example pair matching:
 
+<!--
 ```python
 def get_word_confidence(ofv2_model, device, query_image, query_question, target_answer,
                       example_image, example_question, example_answer,
@@ -40,6 +41,7 @@ def get_word_confidence(ofv2_model, device, query_image, query_question, target_
     avg_confidence = sum(target_probs) / len(target_probs)
     return avg_confidence
 ```
+ --> 
 
 
 Required path configurations:
